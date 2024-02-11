@@ -1,0 +1,192 @@
+/* Animación del encabezado de perfil */
+.encabezado-perfil {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3498db;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agregamos una sombra para un efecto más tridimensional */
+}
+
+.encabezado-perfil:hover {
+  background-color: #ff6384; /* Cambiamos el color al pasar el mouse */
+}
+.nombre {
+  text-align: center;
+  flex: 1;
+  color: #fff; 
+}
+
+/* Animación de la imagen de perfil */
+.foto {
+  border-radius: 50%;
+  max-width: 100px;
+  animation: spin 5s infinite linear; /* Hacemos que el giro sea más uniforme */
+  
+}
+
+
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+.caja-informacion {
+  background-color: #2ecc71; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.contenido-estadisticas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Animación de las estadísticas */
+.estadistica {
+  background-color: #e74c3c;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 0 15px rgba(231, 76, 60, 0.4); /* Aumentamos el tamaño y la opacidad de la sombra */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.estadistica:hover {
+  transform: translateY(-5px); /* Movemos ligeramente las estadísticas hacia arriba */
+  box-shadow: 0 0 20px rgba(231, 76, 60, 0.8); /* Intensificamos la sombra al pasar el mouse */
+}
+
+footer {
+  margin-top: 10px;
+  text-align: center;
+  background-color: #9b59b6;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+footer:hover {
+  background-color: #2c3e50; /* Cambiamos el color al pasar el mouse */
+}
+
+.enlaces {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.enlaces a {
+  margin: 0 15px;
+  color: #f39c12; 
+  text-decoration: none;
+}
+
+
+.lista {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.link {
+  margin: 10px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+.link a:hover {
+  color: #007bff;
+}
+
+.tw-followCard {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: .8rem;
+  justify-content: space-between;
+}
+
+.tw-followCard-header {
+  display: flex;
+  align-items: center;
+  gap: 4px
+}
+
+.tw-followCard-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tw-followCard-infoUserName {
+  opacity: .6;
+}
+
+.tw-followCard-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 1000px;
+}
+
+.tw-followCard-button {
+  cursor: pointer;
+  margin-left: 16px;
+  border: 0;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-weight: bold;
+  border: 1px solid #000;
+  transition: .3s ease background-color;
+}
+
+.tw-followCard-button:hover {
+  opacity: .8;
+}
+
+.tw-followCard-text {
+  display: block;
+}
+
+.tw-followCard-button.is-following {
+  border: 1px solid #bbb;
+  background: transparent;
+  color: #fff;
+  width: 140px;
+}
+
+.tw-followCard-button.is-following:hover {
+  background-color: rgba(255, 0, 0, 0.178);
+  color: red;
+  border: 1px solid red;
+  transition: .3s ease all;
+  opacity: 1;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-text {
+  display: none;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-stopFollow {
+  display: block;
+}
+
+.tw-followCard-stopFollow {
+  display: none;
+}
+
